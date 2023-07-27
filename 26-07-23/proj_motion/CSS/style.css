@@ -1,0 +1,140 @@
+/* Configuração Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* ajusta as dimensões */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 172, 62);
+    font-size: 1.5em;
+}
+
+/* NavBar */
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #e90707;
+}
+
+.navbar img {
+    width: 150px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li+li {
+    margin-left: 5px;
+}
+
+.navbar li a {
+    list-style: none;
+    display: block;
+    padding: 10px 20px;
+}
+
+.navbar li a :hover {
+    color: #dcdcee;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Usando o display:flex */
+.sub-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* permissão de quebrar as colunas*/
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* margem superior e inferior 0 */
+    width: 1024px;
+    /* largura */
+    height: 1024px;
+    /* altura */
+    padding: 20px;
+    /* margem interna */
+}
+
+/* Div principal "conteiner" */
+.container {
+    width: 1024vw;
+    margin: 0 auto
+}
+
+/* section */
+.section {
+    display: grid;
+    /* dividindo colunas e linhas */
+    grid-template-columns: 512px 512px;
+}
+
+.img-area,
+.text-area {
+    width: 512px;
+    align-items: center;
+    display: grid;
+}
+
+.img-area {
+    display: flex;
+    align-items: center;
+    /* alinhamento horizontal */
+    justify-content: center;
+    /* alinhamento vertical */
+    position: relative;
+}
+
+img-area img {
+    max-width: 100%;
+    padding: 20px;
+    /* margem interna */
+    border-radius: 100px;
+    transition: all .25s ease;
+}
+
+.img-area span {
+    opacity: 0;
+    position: absolute;
+    transition: all .25s ease;
+    ease z-index: 1;
+}
+
+.img-area:hover{
+    filter: sepia(100%);
+}
+
+.text-area{
+    color: #e90707;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px;
+    }
+
+    .text-area h1{
+    margin-bottom: 20px;
+    cursor: all-scroll;
+    }
+    
+    .text-area p{
+        text-align: justify;
+    }
+
+    .bg-contat{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        border-radius: 10px;
+        background: url(/img/mountain_3.png);
+        background-size: cover;
+    }
